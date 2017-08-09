@@ -16,6 +16,10 @@ func main() {
 
 	fmt.Println("Hola mundo")
 	fmt.Println(number, a, b, c)
+
+	fmt.Print("Ingresa dos numeros: ")
+	fmt.Scanf("%d %d", &a, &b)
+	fmt.Println(calculate(a, b))
 }
 
 func getName() string {
@@ -32,6 +36,14 @@ func getVariables() (int, int, int) {
 	return 1, 2, 3
 }
 
+func calculate(a int, b int) (int, int) {
+	return sum(a, b), difference(a, b)
+}
+
 func sum(a int, b int) int {
 	return a + b
+}
+
+func difference(a int, b int) int {
+	return a - b
 }
