@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-const helloWorld string = "Hola %s %s, bienvenido al fascinante mundo de go"
+const helloWorld string = "Hola %s %s, bienvenido al fascinante mundo de go\n"
 const testConst = "Test"
 
 func main() {
