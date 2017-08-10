@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 const helloWorld string = "Hola %s %s, bienvenido al fascinante mundo de go\n"
 const testConst = "Test"
@@ -26,6 +29,7 @@ func main() {
 	getSlice()
 	ifTest()
 	forTest()
+	strings2()
 
 	s := 1000
 	while(func() bool {
@@ -115,6 +119,14 @@ func while(cond func() bool, body func()) {
 	for cond() {
 		body()
 	}
+}
+
+func strings2() {
+	var text = "Hello World, Hello Pablo, Hello Go"
+	fmt.Println(strings.ToUpper(text))
+	fmt.Println(strings.ToLower(text))
+	fmt.Println(strings.Replace(text, "Hello", "Hola", -1))
+	fmt.Println(strings.Split(text, ","))
 }
 
 func getSlice() {
