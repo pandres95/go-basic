@@ -22,6 +22,8 @@ func main() {
 	fmt.Println("Cadena con UTF8: ", stringUTF8)
 	fmt.Println(string("hola"[1]), ". Codigo ASCII: ", "hola"[1])
 	fmt.Println("Cantidad de letras que tiene hola: ", len("hola"))
+	getArray()
+	getSlice()
 
 	fmt.Print("Ingresa dos numeros: ")
 	fmt.Scanf("%d %d", &a, &b)
@@ -48,6 +50,24 @@ func getFloat() (float32, float64) {
 
 func getUnicode() string {
 	return "もしもし！"
+}
+
+func getArray() {
+	var arr1 [2]string
+	arr2 := [3]int{1, 2, 3}
+
+	arr1[0] = "array"
+	arr1[1] = "array2"
+
+	fmt.Println(arr1, arr2)
+}
+
+func getSlice() {
+	var slice1 []string
+
+	slice1 = append(slice1, "Mi", "slice", "1")
+
+	fmt.Println(slice1)
 }
 
 func calculate(a int, b int) (int, int) {
