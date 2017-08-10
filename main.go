@@ -25,11 +25,12 @@ func main() {
 	getArray()
 	getSlice()
 	ifTest()
-	ifGame()
 
 	fmt.Print("Ingresa dos numeros: ")
 	fmt.Scanf("%d %d", &a, &b)
 	fmt.Println(calculate(a, b))
+
+	guessTheNumber()
 }
 
 func getName() string {
@@ -81,20 +82,6 @@ func ifTest() {
 	}
 }
 
-func ifGame() {
-	var guess int
-	var number = 8
-
-	fmt.Print("Ingrese un número entre 1 y 10: ")
-	fmt.Scanf("%d", &guess)
-
-	if guess == number {
-		fmt.Println("Ha adivinado el número.")
-	} else {
-		fmt.Println("No ha adivinado el número.")
-	}
-}
-
 func getSlice() {
 	var slice1 []string
 
@@ -113,4 +100,18 @@ func sum(a int, b int) int {
 
 func difference(a int, b int) int {
 	return a - b
+}
+
+func guessTheNumber() {
+	var guess int
+	var number = 8
+
+	fmt.Print("Ingrese un número entre 1 y 10: ")
+	fmt.Scanf("%d", &guess)
+
+	if guess == number {
+		fmt.Println("Ha adivinado el número.")
+	} else {
+		fmt.Println("No ha adivinado el número.")
+	}
 }
