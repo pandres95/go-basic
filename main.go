@@ -25,6 +25,14 @@ func main() {
 	getArray()
 	getSlice()
 	ifTest()
+	forTest()
+
+	s := 1000
+	while(func() bool {
+		return s > 0
+	}, func() {
+		s--
+	})
 
 	fmt.Print("Ingresa dos numeros: ")
 	fmt.Scanf("%d %d", &a, &b)
@@ -79,6 +87,33 @@ func ifTest() {
 
 	if number2 := 3; number2 == 3 {
 		fmt.Println("Entró al condicional")
+	}
+}
+
+func forTest() {
+	for i := 0; i < 5; i++ {
+		fmt.Println("[FOR] ", i)
+	}
+
+	c := 100
+	for c > 0 {
+		c -= 10
+		fmt.Println("[FOR] Solo con una condición de c > 0, ", c)
+	}
+
+	s := 1000
+	for {
+		s--
+		if s == 0 {
+			// Termina el for "infinito"
+			break
+		}
+	}
+}
+
+func while(cond func() bool, body func()) {
+	for cond() {
+		body()
 	}
 }
 
