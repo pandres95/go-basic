@@ -25,6 +25,7 @@ func main() {
 	getArray()
 	getSlice()
 	ifTest()
+	ifGame()
 
 	fmt.Print("Ingresa dos numeros: ")
 	fmt.Scanf("%d %d", &a, &b)
@@ -77,6 +78,20 @@ func ifTest() {
 
 	if number2 := 3; number2 == 3 {
 		fmt.Println("Entró al condicional")
+	}
+}
+
+func ifGame() {
+	var guess int
+	var number = 8
+
+	fmt.Print("Ingrese un número entre 1 y 10: ")
+	fmt.Scanf("%d", &guess)
+
+	if guess == number {
+		fmt.Println("Ha adivinado el número.")
+	} else {
+		fmt.Println("No ha adivinado el número.")
 	}
 }
 
