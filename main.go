@@ -12,12 +12,16 @@ func main() {
 	number := sum(50, 50)
 	a, b, c := getVariables()
 	f32, f64 := getFloat()
+	stringUTF8 := getUnicode()
 
 	fmt.Printf(helloWorld, name, lastname)
 
 	fmt.Println("Hola mundo")
 	fmt.Println(number, a, b, c)
 	fmt.Println(f32, f64)
+	fmt.Println("Cadena con UTF8: ", stringUTF8)
+	fmt.Println(string("hola"[1]), ". Codigo ASCII: ", "hola"[1])
+	fmt.Println("Cantidad de letras que tiene hola: ", len("hola"))
 
 	fmt.Print("Ingresa dos numeros: ")
 	fmt.Scanf("%d %d", &a, &b)
@@ -40,6 +44,10 @@ func getVariables() (int, int, int) {
 
 func getFloat() (float32, float64) {
 	return float32(0.1), float64(float32(0.1))
+}
+
+func getUnicode() string {
+	return "もしもし！"
 }
 
 func calculate(a int, b int) (int, int) {
