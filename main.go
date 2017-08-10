@@ -24,6 +24,7 @@ func main() {
 	fmt.Println("Cantidad de letras que tiene hola: ", len("hola"))
 	getArray()
 	getSlice()
+	ifTest()
 
 	fmt.Print("Ingresa dos numeros: ")
 	fmt.Scanf("%d %d", &a, &b)
@@ -60,6 +61,23 @@ func getArray() {
 	arr1[1] = "array2"
 
 	fmt.Println(arr1, arr2)
+}
+
+func ifTest() {
+	var number = 0
+
+	fmt.Print("Ingresa un número del 1 al 10: ")
+	fmt.Scanf("%d", &number)
+
+	if number%2 == 0 {
+		fmt.Println("El número es par")
+	} else {
+		fmt.Println("El número es impar")
+	}
+
+	if number2 := 3; number2 == 3 {
+		fmt.Println("Entró al condicional")
+	}
 }
 
 func getSlice() {
